@@ -1,0 +1,62 @@
+body {
+	background-color: #333333;
+}
+h1 {
+	color: orange;
+	font-family: Helvetica;
+	font-weight: bold;
+}
+p {
+	color: white;
+	font-family: Sans-Serif;
+	padding-left: 20px;
+}
+h2 {
+	color: white;
+	font-weight: bold;
+	font-family: Helvetica;
+}
+img {
+	border: solid 5px orange;
+	border-radius: 50px;
+	margin-left: 20px;
+}
+a {
+	color: orange;
+}
+h3 {
+	color: white;
+	font-weight: bold;
+	font-family: Helvetica;
+	padding-left: 10px;
+	font-size: 20px;
+}
+li {
+	color: white;
+	font-family: Sans-Serif;
+	padding-left: 20px;
+}
+ul {
+	font-size: 15px;
+}
+table {
+	color: white;
+	font-family: Sans-Serif;
+	color: orange;
+}
+td {
+	color: white;
+	font-family: Sans-Serif;
+	padding: 5px 0 0 10px;
+}
+button {
+	background-color: orange;
+	color: #444444;
+	font-family: Helvetica;
+	font-weight: bold;
+	border-radius: 5px;
+}
+input, textarea {
+	background-color: #444444;
+	color: white;
+}
