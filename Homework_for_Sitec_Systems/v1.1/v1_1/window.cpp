@@ -6,6 +6,8 @@
 #include <QtGui>
 #include <QLabel>
 #include <QPixmap>
+#include <ctime>
+using namespace std;
 
 Window::Window(QWidget *parent) :
     QWidget(parent)
@@ -23,10 +25,13 @@ Window::Window(QWidget *parent) :
     m_button3 = new QPushButton("Close the app", this);
     m_button3->setGeometry(290, 10, 110, 30);
 
+    m_button4 = new QPushButton("Hello!", this);
+    m_button4->setGeometry(170, 60, 110, 30);
+
     connect(m_button1, &QPushButton::clicked, this, &Window::button1Clicked );
     connect(m_button2, &QPushButton::clicked, this, &Window::button2Clicked );
     connect(m_button3, &QPushButton::clicked, this, &Window::button3Clicked );
-
+    connect(m_button4, &QPushButton::clicked, this, &Window::button4Clicked );
 }
 
 void Window::button1Clicked() {
@@ -40,7 +45,7 @@ void Window::button2Clicked() {
     void button2Clicked();
     QImage myImage;
     QLabel *myLabel = new QLabel();
-    myLabel->setGeometry(50, 280, 400, 300);
+    myLabel->setGeometry(50, 280, 600, 800);
     myImage.load("Mona_Lisa.jpg");
 
 
@@ -52,4 +57,19 @@ void Window::button2Clicked() {
 void Window::button3Clicked() {
     void button3Clicked();
     close();
+}
+
+void Window::button4Clicked() {
+    void button4Clicked();
+
+    time_t timestamp;
+    time(&timestamp);
+
+    QLabel *label = new QLabel(this);
+    label->move(10, 150);
+    string time = ctime(&timestamp);
+    QString sentence = "Hello\nI'm an app!\nCurrent time and date is ";
+    label->setText(sentence.append(time));
+
+    label->show();
 }
