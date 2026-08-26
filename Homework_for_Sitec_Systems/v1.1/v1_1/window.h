@@ -15,6 +15,8 @@ private:
     QPushButton *m_button3;
 public slots:
     void button1Clicked();
+    void button2Clicked();
+    void button3Clicked();
 };
 
 #endif // WINDOW_H
